@@ -20,10 +20,10 @@ func main() {
         wg.Add(1)
 
         // Create a new variable
-        // i := i
+        i := i
 
         go func() {
-            defer wg.Done()
+            defer wg.Done() // decrement the wait group counter by 1
             worker(i)
         }()
     }
